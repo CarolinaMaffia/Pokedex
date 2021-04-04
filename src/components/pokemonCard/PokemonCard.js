@@ -1,19 +1,20 @@
 import React from 'react';
 import './pokemonCard.scss';
+import pokemonType from '../../helpers/pokemonTypes';
 
-const PokemonCard = pokemon => {
+const PokemonCard = ({pokemon}) => {
     console.log('poke', pokemon)
     return (
         <div className="pokemon-card-container">
             <div>
-                <img className="pokemon-img" src={pokemon.pokemon.sprites.front_default} alt="pokemon card" />
-                <h3> {pokemon.pokemon.name} </h3>
+                <img className="pokemon-img" src={pokemon.sprites.front_default} alt="pokemon card" />
+                <h3> {pokemon.name} </h3>
                 <div className="type-container">
-                    <p>{pokemon.pokemon.types.map(type => {
-                        return <div className="card-type">
+                    {pokemon.types.map((type, i) => {
+                        return <div className="card-type" style={{ backgroundColor: pokemonType[type.type.name]}} key={i}>
                             {type.type.name}
                         </div>
-                    })}</p>
+                    })}
                 </div>
             </div>
         </div>

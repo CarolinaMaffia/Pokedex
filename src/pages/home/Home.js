@@ -5,27 +5,38 @@ import PokemonCard from '../../components/pokemonCard/PokemonCard';
 import SearchBar from '../../components/searchBar';
 
 // Assets
+import pokedex from '../../assets/pokedex.png';
 import homePokeball from '../../assets/pokeball.png';
+// import footer from '../../assets/withLove.png'
 
 // Styles
 import './home.scss';
 
-const Home = pokemonData => {
-    console.log('AVER', pokemonData)
+const Home = ({ pokemonData, prev, next }) => {
+    console.log('AVER', prev)
     return (
         <div className="home-container">
-            <div className="search-container">
-                <img className="pokeball-icon" src={homePokeball} alt="home pokeball" />
-                <h2> Find your Pokemon! </h2>
+            <div className="main-icon-container">
+                <img className="pokeball-icon" src={pokedex} alt="home pokeball" />
+            </div>
+            <div className="searchBar-container">
                 <div className="search-bar">
                     <SearchBar />
                 </div>
             </div>
+            
+            <div className="btn">
+              <button onClick={prev}>Prev</button>
+              <button onClick={next}>next</button>
+            </div>
 
             <div className="cards-container">
-                {pokemonData.pokemonData.map((pokemon, i) => {
+                {pokemonData.map((pokemon, i) => {
                     return <PokemonCard key={i} pokemon={pokemon} />
                 })}
+            </div>
+            <div className="footer">
+                <p> Made with <img className="footer-icon" src={homePokeball} alt="charchar"/> by Caru</p>
             </div>
         </div>
     );

@@ -17,13 +17,13 @@
 }
 
 .type-container {
-    background: lightcoral;
-    width: 70px;
-    border-radius: 10px;
-
-    p {
-        padding: 2px;
-        font-size: 18px;
-        color: #FFFFFF;
-    }
+    display: flex;
+    justify-content: center;
+}
+.card-type {
+   padding: 5px 10px;
+   margin: 10px 10px 10px 0;
+   border-radius: 5px;
+   color: #fff;
+   width: 50px;
 }

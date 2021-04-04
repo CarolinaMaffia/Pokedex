@@ -28,6 +28,26 @@ const App = ()  => {
     fetchData();
   }, []);
 
+  //pagination
+  const next = async () => {
+    setLoading(true);
+    let data = await getAllPokemon(nextUrl)
+    await loadingPokemon(data.results)
+    setNextUrl(data.next);
+    setPrevUrl(data.previous);
+    setLoading(false);
+  }
+
+  const prev = async () => {
+    if (!prevUrl) return;
+    setLoading(true);
+    let data = await getAllPokemon(prevUrl)
+    await loadingPokemon(data.results)
+    setNextUrl(data.next);
+    setPrevUrl(data.previous);
+    setLoading(false);
+  }
+
   const loadingPokemon = async data => {
     let _pokemonData = await Promise.all(data.map(async pokemon => {
       let pokemonRecord = await getPokemon(pokemon.url);
@@ -41,7 +61,7 @@ const App = ()  => {
   return (
     <div className="App">
       { 
-        loading  ? <h1> Loading... </h1> : <Home pokemonData={pokemonData} />
+        loading  ? <h1> Loading... </h1> : <Home pokemonData={pokemonData} prev={prev} next={next} />
       }
     </div>
   );
