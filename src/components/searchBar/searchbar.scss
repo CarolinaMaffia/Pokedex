@@ -1,0 +1,24 @@
+.searchbar-container {
+	margin-top: 5em;
+	background: #fff;
+	padding: 1em;
+	width: 100%;
+	border-radius: 10em;
+	
+    transition: box-shadow 300ms ease;
+    
+    input {
+        width: 100%;
+        border-style: none;
+            
+        color: inherit;
+        background-color: transparent;
+    
+        padding-left: 1em;
+        font-size: 1.3em;
+    }
+}
+
+.searchbar-container input:focus {
+	outline: none;
+}
