@@ -7,28 +7,29 @@
 
 .pokeball-icon {
     width: 300px;
-    // height: 100px;
     padding: 10px;
 }
 .main-icon-container {
-    // padding: 30px;
     background-color: #333333;
     width: 100%;
-    // height: 200px;
     display: flex;
     padding: 20px 0px 0px 20px;
 }
 
 .searchBar-container {
+    width: 500px;
 }
 
-.btn {
-    width: 250px;
+.cont-del-cont {
     display: flex;
-    justify-content: space-around;
-    position: absolute;
-    top: 350px;
-    right: 170px;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.btn {
+    display: flex;
+    align-self: flex-end;
+    padding-right: 170px;
+
     button {
         width: 100px;
         height: 30px;
@@ -36,12 +37,13 @@
         background-color: red;
         border: none;
         color: white;
+        margin-left: 10px;
     }
 }
 
 .cards-container {
     display: flex;
-    margin-top: 100px;
+    margin-top: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }

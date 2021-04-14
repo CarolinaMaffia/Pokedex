@@ -24,7 +24,7 @@ const Home = ({ pokemonData, prev, next }) => {
                     <SearchBar pokemonData={pokemonData} />
                 </div>
             </div>
-            
+        <div className="cont-del-cont">   
             <div className="btn">
               <button onClick={prev}>Prev</button>
               <button onClick={next}>next</button>
@@ -35,6 +35,7 @@ const Home = ({ pokemonData, prev, next }) => {
                     return <PokemonCard key={i} pokemon={pokemon} />
                 })}
             </div>
+        </div>
             <div className="footer">
                 <p> Made with <img className="footer-icon" src={homePokeball} alt="charchar"/> by Caru</p>
             </div>
