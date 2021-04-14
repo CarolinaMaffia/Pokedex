@@ -21,7 +21,7 @@ const Home = ({ pokemonData, prev, next }) => {
             </div>
             <div className="searchBar-container">
                 <div className="search-bar">
-                    <SearchBar />
+                    <SearchBar pokemonData={pokemonData} />
                 </div>
             </div>
             

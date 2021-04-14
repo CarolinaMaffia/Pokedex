@@ -3,10 +3,9 @@ import './pokemonCard.scss';
 import pokemonType from '../../helpers/pokemonTypes';
 
 const PokemonCard = ({pokemon}) => {
-    console.log('poke', pokemon)
     return (
         <div className="pokemon-card-container">
-            <div>
+            <div className="aber">
                 <img className="pokemon-img" src={pokemon.sprites.front_default} alt="pokemon card" />
                 <h3> {pokemon.name} </h3>
                 <div className="type-container">

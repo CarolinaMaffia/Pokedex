@@ -2,3 +2,23 @@
   text-align: center;
   background: #f3f3f4;
 }
+
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s linear infinite;
+  height:100vh;
+  opacity: 0.5;
+}
+
+.loader-img {
+  width: 200px;
+  height: 200px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

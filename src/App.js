@@ -60,9 +60,12 @@ const App = ()  => {
   console.log(pokemonData);
   return (
     <div className="App">
-      { 
-        loading  ? <h1> Loading... </h1> : <Home pokemonData={pokemonData} prev={prev} next={next} />
-      }
+      
+        {
+        // For a future loader
+        /* loading  ? <h1> Loading... </h1> : <Home pokemonData={pokemonData} prev={prev} next={next} /> */
+        }
+      <Home pokemonData={pokemonData} prev={prev} next={next} />
     </div>
   );
 }
