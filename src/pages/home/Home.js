@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Components
 import PokemonCard from '../../components/pokemonCard/PokemonCard';
@@ -7,13 +7,25 @@ import SearchBar from '../../components/searchBar';
 // Assets
 import pokedex from '../../assets/pokedex.png';
 import homePokeball from '../../assets/pokeball.png';
-// import footer from '../../assets/withLove.png'
 
 // Styles
 import './home.scss';
 
 const Home = ({ pokemonData, prev, next }) => {
-    console.log('AVER', prev)
+
+    const [searchPokemon, setSearchPokemon] = useState('');
+    const [searchResult, setSearchResult] = useState([]);
+
+    const handleChange = e => {
+        setSearchPokemon(e.target.value);
+    }
+    
+    useEffect(() => {
+        const results = pokemonData.filter(pokemon => pokemon.name.toLowerCase().includes(searchPokemon)
+        );
+        setSearchResult(results);
+    }, [searchPokemon]);
+
     return (
         <div className="home-container">
             <div className="main-icon-container">
@@ -21,7 +33,7 @@ const Home = ({ pokemonData, prev, next }) => {
             </div>
             <div className="searchBar-container">
                 <div className="search-bar">
-                    <SearchBar pokemonData={pokemonData} />
+                    <SearchBar value={searchPokemon} handleChange={handleChange} />
                 </div>
             </div>
         <div className="cont-del-cont">   
@@ -31,8 +43,8 @@ const Home = ({ pokemonData, prev, next }) => {
             </div>
 
             <div className="cards-container">
-                {pokemonData.map((pokemon, i) => {
-                    return <PokemonCard key={i} pokemon={pokemon} />
+                {searchResult.map((pokemon, i) => {
+                    return <PokemonCard key={i}  pokemon={pokemon} />
                 })}
             </div>
         </div>

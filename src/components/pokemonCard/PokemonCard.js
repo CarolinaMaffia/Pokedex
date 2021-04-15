@@ -2,7 +2,7 @@ import React from 'react';
 import './pokemonCard.scss';
 import pokemonType from '../../helpers/pokemonTypes';
 
-const PokemonCard = ({pokemon}) => {
+const PokemonCard = ({ pokemon }) => {
     return (
         <div className="pokemon-card-container">
             <div className="aber">
