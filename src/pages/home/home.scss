@@ -9,55 +9,52 @@
     width: 300px;
     padding: 10px;
 }
+
 .main-icon-container {
     background-color: #333333;
     width: 100%;
     display: flex;
-    // padding: 20px 0px 0px 20px;
+    padding: 15px 0px 15px 0px;
 }
 
 .searchBar-container {
     width: 500px;
 }
 
-.cont-del-cont {
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-}
-.btn {
-    display: flex;
-    align-self: flex-end;
-    padding-right: 170px;
+.cards-section {
+    margin-top: 50px;
+    display: inline-block;
 
-    button {
-        width: 100px;
-        height: 30px;
-        border-radius: 10px;
-        background-color: red;
-        border: none;
-        color: white;
-        margin-left: 10px;
-    }
-}
+    .btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 170px;
+    
+        button {
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            margin-left: 10px;
+            background-color: red;
+        };
+    };
 
-.cards-container {
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+    .cards-container {
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    };
+};
 
-.footer p {
-    font-size: 20px;
-}
+.footer {
+    p {
+        font-size: 20px;
+    };
 
-.footer a:link, a:visited {
-    color: #333;
-}
-
-.footer-icon {
-    width: 30px;
-    //Remove this negative margin or I will kill you mf
-    margin-bottom: -5px;
-}
+    a:link, a:visited {
+        color: #333;
+    };
+};

@@ -16,19 +16,16 @@ const Home = ({ pokemonData, prev, next }) => {
     const [searchPokemon, setSearchPokemon] = useState('');
     const [searchResult, setSearchResult] = useState([]);
     
-   console.log('pokemon', pokemonData); 
     const handleChange = e => {
         setSearchPokemon(e.target.value);
     };
 
     useEffect(() => {
-        const results = pokemonData.filter(pokemon => pokemon.name.toLowerCase().includes(searchPokemon)
+        const results = pokemonData.filter(pokemon => searchPokemon.toLowerCase()
+        .includes(pokemon.name.toLowerCase().substring(0, searchPokemon.length))
         );
         setSearchResult(results);
-        console.log('searchPoke', searchPokemon);
     }, [searchPokemon]);
-
-    console.log('sResult', searchResult);
 
     return (
         <div className="home-container">        
@@ -40,7 +37,7 @@ const Home = ({ pokemonData, prev, next }) => {
                     <SearchBar value={searchPokemon} handleChange={handleChange} />
                 </div>
             </div>
-        <div className="cont-del-cont">   
+        <div className="cards-section">   
             <div className="btn">
               <button onClick={prev}>Prev</button>
               <button onClick={next}>next</button>
@@ -53,7 +50,7 @@ const Home = ({ pokemonData, prev, next }) => {
             </div>
         </div>
             <div className="footer">
-                <p> Made with <img className="footer-icon" src={homePokeball} alt="charchar"/> by <a href="https://github.com/CarolinaMaffia" target="_blank" rel="noreferrer"> Caru </a> </p>
+                <p> Made with 💖 by <a href="https://github.com/CarolinaMaffia" target="_blank" rel="noreferrer"> Caru </a> </p>
             </div>
         </div>
     );
