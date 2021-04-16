@@ -62,9 +62,9 @@ const App = ()  => {
       
         {
         // For a future loader
-        /* loading  ? <h1> Loading... </h1> : <Home pokemonData={pokemonData} prev={prev} next={next} /> */
+         loading  ? <h1> Loading... </h1> : <Home pokemonData={pokemonData} prev={prev} next={next} /> 
         }
-      <Home pokemonData={pokemonData} prev={prev} next={next} />
+      {/* <Home pokemonData={pokemonData} prev={prev} next={next} /> */}
     </div>
   );
 }

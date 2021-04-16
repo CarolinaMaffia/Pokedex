@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 
 // Components
 import PokemonCard from '../../components/pokemonCard/PokemonCard';
@@ -15,19 +15,23 @@ const Home = ({ pokemonData, prev, next }) => {
 
     const [searchPokemon, setSearchPokemon] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-
+    
+   console.log('pokemon', pokemonData); 
     const handleChange = e => {
         setSearchPokemon(e.target.value);
-    }
-    
+    };
+
     useEffect(() => {
         const results = pokemonData.filter(pokemon => pokemon.name.toLowerCase().includes(searchPokemon)
         );
         setSearchResult(results);
+        console.log('searchPoke', searchPokemon);
     }, [searchPokemon]);
 
+    console.log('sResult', searchResult);
+
     return (
-        <div className="home-container">
+        <div className="home-container">        
             <div className="main-icon-container">
                 <img className="pokeball-icon" src={pokedex} alt="home pokeball" />
             </div>
