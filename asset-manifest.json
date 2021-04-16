@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Pokedex/static/css/main.c2885feb.chunk.css",
+    "main.js": "/Pokedex/static/js/main.23483a02.chunk.js",
+    "main.js.map": "/Pokedex/static/js/main.23483a02.chunk.js.map",
+    "runtime-main.js": "/Pokedex/static/js/runtime-main.f87f1759.js",
+    "runtime-main.js.map": "/Pokedex/static/js/runtime-main.f87f1759.js.map",
+    "static/js/2.7960e4d0.chunk.js": "/Pokedex/static/js/2.7960e4d0.chunk.js",
+    "static/js/2.7960e4d0.chunk.js.map": "/Pokedex/static/js/2.7960e4d0.chunk.js.map",
+    "static/js/3.64516b57.chunk.js": "/Pokedex/static/js/3.64516b57.chunk.js",
+    "static/js/3.64516b57.chunk.js.map": "/Pokedex/static/js/3.64516b57.chunk.js.map",
+    "index.html": "/Pokedex/index.html",
+    "static/css/main.c2885feb.chunk.css.map": "/Pokedex/static/css/main.c2885feb.chunk.css.map",
+    "static/js/2.7960e4d0.chunk.js.LICENSE.txt": "/Pokedex/static/js/2.7960e4d0.chunk.js.LICENSE.txt",
+    "static/media/pokeball.3ad8d4f0.png": "/Pokedex/static/media/pokeball.3ad8d4f0.png",
+    "static/media/pokedex.beda6a95.png": "/Pokedex/static/media/pokedex.beda6a95.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f87f1759.js",
+    "static/js/2.7960e4d0.chunk.js",
+    "static/css/main.c2885feb.chunk.css",
+    "static/js/main.23483a02.chunk.js"
+  ]
+}
