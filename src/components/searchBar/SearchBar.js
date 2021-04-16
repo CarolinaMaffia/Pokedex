@@ -1,5 +1,5 @@
 import React from 'react';
-// import PokemonCard from '../pokemonCard/PokemonCard';
+import Char from '../../assets/pokeball.png';
 import './searchbar.scss';
 
 
@@ -8,7 +8,9 @@ const SearchBar = ({ value, handleChange }) => {
 
     return (
         <div className="searchbar-container"> 
-            <input value={value} onChange={handleChange} type="text" placeholder="search your pokemon" />
+                        <img src={Char} alt="charmander" className="ahre" />
+            <input value={value} onChange={handleChange} type="text" placeholder="Gotta catch em all" >
+            </input>
         </div>
     )
 }

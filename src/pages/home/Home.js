@@ -53,7 +53,7 @@ const Home = ({ pokemonData, prev, next }) => {
             </div>
         </div>
             <div className="footer">
-                <p> Made with <img className="footer-icon" src={homePokeball} alt="charchar"/> by Caru</p>
+                <p> Made with <img className="footer-icon" src={homePokeball} alt="charchar"/> by <a href="https://github.com/CarolinaMaffia" target="_blank" rel="noreferrer"> Caru </a> </p>
             </div>
         </div>
     );

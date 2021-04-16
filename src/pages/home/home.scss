@@ -13,7 +13,7 @@
     background-color: #333333;
     width: 100%;
     display: flex;
-    padding: 20px 0px 0px 20px;
+    // padding: 20px 0px 0px 20px;
 }
 
 .searchBar-container {
@@ -52,7 +52,12 @@
     font-size: 20px;
 }
 
+.footer a:link, a:visited {
+    color: #333;
+}
+
 .footer-icon {
     width: 30px;
-
+    //Remove this negative margin or I will kill you mf
+    margin-bottom: -5px;
 }
